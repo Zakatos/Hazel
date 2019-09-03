@@ -1,5 +1,6 @@
 workspace "Hazel"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -8,7 +9,15 @@ workspace "Hazel"
 		"Dist"
 	}
 
+	flags
+	{
+		"MultiProcessorCompile"
+	}
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
 
 project "Hazel"
 	location "Hazel"
@@ -26,7 +35,8 @@ project "Hazel"
 
 	includedirs
 	{
-		"Hazel/vendor/spdlog/include;"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
@@ -74,8 +84,9 @@ project "Hazel"
 
 	includedirs
 	{
-		"Hazel/vendor/spdlog/include;",
-		"Hazel/src"
+		"Hazel/vendor/spdlog/include",
+		"Hazel/src",
+		"Hazel/vendor"
 	}
 
 	links
