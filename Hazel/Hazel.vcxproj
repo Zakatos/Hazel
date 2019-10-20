@@ -168,9 +168,9 @@
     <ClInclude Include="src\Hazel\Layer.h" />
     <ClInclude Include="src\Hazel\LayerStack.h" />
     <ClInclude Include="src\Hazel\Log.h" />
-    <ClInclude Include="src\Hazel\Window.h" />
     <ClInclude Include="src\Hazel\Platform\OpenGL\ImGuiOpenGLRender.h" />
     <ClInclude Include="src\Hazel\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Hazel\Window.h" />
     <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
