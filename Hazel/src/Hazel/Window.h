@@ -39,6 +39,8 @@ namespace Hazel {
 		virtual bool IsVsync() const = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
+
+		virtual void* GetNativeWindow() const = 0;
 	};
 
 
